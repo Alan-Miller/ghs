@@ -1,5 +1,5 @@
 #! /usr/bin/env node
-const argsOptions = require('./lib/options/args');
+const argsKeys = require('./lib/options/args');
 const showArgs = require('./lib/showArgs');
 const showRepos = require('./lib/showRepos');
 const showUser = require('./lib/showUser');
@@ -7,7 +7,7 @@ const makeRepo = require('./lib/makeRepo');
 
 const yargs = require('yargs')
   .options({
-    'args': argsOptions
+    'args': argsKeys
   })
   // .command(['args'], 'See all args', yargs => { }, args => { showArgs(yargs) })
   .command(['make'], 'Make repo', yargs => { }, args => { makeRepo(yargs) })
